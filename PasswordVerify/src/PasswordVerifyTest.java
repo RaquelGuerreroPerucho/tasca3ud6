@@ -89,8 +89,18 @@ class PasswordVerifyTest {
                 "\n" + "La contrasenya ha de tenir almenys 8 caràcters" +
                 "\n" + "La contrasenya ha de contenir almenys 2 números";
 
-
         String resultadoReal = PasswordVerify.passwordVerificator("holA!");
+
+        assertEquals(resultadoEsperado, resultadoReal);
+    }
+
+    @Test
+    public void test8() {
+        String resultadoEsperado = "false" +
+                "\n" + "La contrasenya ha de tenir almenys 8 caràcters" +
+                "\n" + "La contrasenya ha de contenir almenys una lletra majúscula";
+
+        String resultadoReal = PasswordVerify.passwordVerificator("hola12!");
 
         assertEquals(resultadoEsperado, resultadoReal);
     }
