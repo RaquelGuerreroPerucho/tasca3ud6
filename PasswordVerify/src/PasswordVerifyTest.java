@@ -195,4 +195,12 @@ class PasswordVerifyTest {
         assertEquals(resultadoEsperado, resultadoReal);
     }
 
+    @Test
+    public void test18() {
+        String resultadoEsperado = "true" + "";
+        String resultadoReal = PasswordVerify.passwordVerificator("holacaracola12A!");
+
+        assertEquals(resultadoEsperado, resultadoReal);
+    }
+
 }
