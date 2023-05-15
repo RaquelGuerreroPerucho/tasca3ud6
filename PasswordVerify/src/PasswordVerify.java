@@ -17,19 +17,19 @@ public class PasswordVerify {
         }
 
         if (!(password.length()>=8)) {
-            error += "La contraseña debe tener mínimo 8 caracteres.";
+            error += "\nLa contrasenya ha de tenir almenys 8 caràcters";
             valido = false;
         }
         if (!(cantDigitos>=2)) {
-            error += "La contraseña debe tener mínimo 2 números.";
+            error += "\nLa contrasenya ha de contenir almenys 2 números";
             valido = false;
         }
         if (!(cantCaracterEspecial>=1)) {
-            error += "La contraseña debe tener mínimo 1 caracter especial.";
+            error += "\nLa contrasenya ha de contenir almenys un caràcter especial";
             valido = false;
         }
         if (!(cantidadMayus>=1)) {
-            error += "La contraseña debe tener mínimo 1 letra mayúscula.";
+            error += "\nLa contrasenya ha de contenir almenys una lletra majúscula";
             valido = false;
         }
         return new SalidaContrasenya(valido, error).toString();
