@@ -186,5 +186,13 @@ class PasswordVerifyTest {
         assertEquals(resultadoEsperado, resultadoReal);
     }
 
+    @Test
+    public void test17() {
+        String resultadoEsperado = "false" +
+                "\n" + "La contrasenya ha de contenir almenys un caràcter especial";
+        String resultadoReal = PasswordVerify.passwordVerificator("holacaracola12A");
+
+        assertEquals(resultadoEsperado, resultadoReal);
+    }
 
 }
