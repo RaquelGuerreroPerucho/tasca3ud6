@@ -158,4 +158,13 @@ class PasswordVerifyTest {
 
         assertEquals(resultadoEsperado, resultadoReal);
     }
+
+    @Test
+    public void test14() {
+        String resultadoEsperado = "false" +
+                "\n" + "La contrasenya ha de tenir almenys 8 caràcters";
+        String resultadoReal = PasswordVerify.passwordVerificator("hol12A!");
+
+        assertEquals(resultadoEsperado, resultadoReal);
+    }
 }
