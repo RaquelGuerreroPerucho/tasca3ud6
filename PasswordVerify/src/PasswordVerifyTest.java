@@ -176,4 +176,15 @@ class PasswordVerifyTest {
 
         assertEquals(resultadoEsperado, resultadoReal);
     }
+
+    @Test
+    public void test16() {
+        String resultadoEsperado = "false" +
+                "\n" + "La contrasenya ha de contenir almenys una lletra majúscula";
+        String resultadoReal = PasswordVerify.passwordVerificator("holacaracola12!");
+
+        assertEquals(resultadoEsperado, resultadoReal);
+    }
+
+
 }
